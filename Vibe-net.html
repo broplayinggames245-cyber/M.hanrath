@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe-Net | Einsamer Wolf</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-color: #f1f5f9;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header / Navigation oben rechts */
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(15,23,42,0.9), transparent);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 20px;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-icons i:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Content - Listen-Stil */
+        main {
+            margin-top: 100px;
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 100px;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-left: 2px solid var(--accent-color);
+            padding-left: 20px;
+        }
+
+        h1, h2 {
+            margin: 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .intro-text {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .vibe-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .vibe-list li {
+            padding: 15px;
+            background: var(--card-bg);
+            margin-bottom: 10px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .vibe-list li:hover {
+            transform: translateX(10px);
+            background: #2d3a4f;
+        }
+
+        .vibe-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        /* Design-Elemente (Wolf & Gruppe) */
+        .design-box {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+
+        .quote {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 4px solid var(--accent-color);
+            text-align: right;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-icons">
+            <i class="fas fa-comments" title="Chatting"></i>
+            <i class="fas fa-users" title="Gruppen"></i>
+            <i class="fas fa-cog" title="Einstellungen"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h1>Vibe-Net</h1>
+            <div class="intro-text">
+                Moin das geht an alle,<br>
+                Wer allein ist hat keine ablenkung<br>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="quote">
+                "Ein einsamer Wolf kann manchmal mehr als ein ganzes Rudel"<br>
+                <strong>– Manchmal ist man allein besser dran als zusammen.</strong>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Was kann man alles tun?</h2>
+            <ul class="vibe-list">
+                <li><i class="fas fa-calendar-alt"></i> Event Ankündigungen <span class="badge">Freiwillig</span></li>
+                <li><i class="fas fa-graduation-cap"></i> Lernen & Fokus</li>
+                <li><i class="fas fa-comment-dots"></i> Chatten</li>
+                <li><i class="fas fa-gamepad"></i> Spielen</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Lernen</h2>
+            <ul class="vibe-list">
+                <li><i class="fas fa-book"></i> <a href="#">Anton</a></li>
+                <li><i class="fas fa-language"></i> <a href="#">Duolingo</a></li>
+                <li><i class="fas fa-brain"></i> <a href="#">Schlaukopf</a></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Spiele</h2>
+            <ul class="vibe-list">
+                <li><i class="fas fa-cube"></i> <a href="https://bloxd.io" target="_blank">Bloxd.io</a></li>
+                <li><i class="fas fa-rocket"></i> <a href="https://www.lunarclient.com" target="_blank">Lunar Client</a></li>
+            </ul>
+        </section>
+
+        <section class="design-box">
+            <span><i class="fas fa-wolf-pack-battalion"></i> Einsamer Wolf</span>
+            <span><i class="fas fa-users-between-lines"></i> Dreier Freundesgruppe</span>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Vibe-Net | Designed for the Solitary
+    </footer>
+
+</body>
+</html>
